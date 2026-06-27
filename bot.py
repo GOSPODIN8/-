@@ -141,7 +141,7 @@ async def successful_payment(update: Update, context: ContextTypes.DEFAULT_TYPE)
             with open(fname, "rb") as f:
                 await context.bot.send_document(
                     chat_id=chat_id, document=f,
-                    filename=fn_out, caption=caption, parse_mode="Markdown", project\_content=True
+                    filename=fn_out, caption=caption, parse_mode="Markdown", protect\_content=True
                 )
         except FileNotFoundError:
             await context.bot.send_message(chat_id=chat_id,
